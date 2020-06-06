@@ -59,8 +59,9 @@ extension CompaniesVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let companyCell: CompanyCell = tableView.dequeueReusableCell(withIdentifier: companyCellIdentifier, for: indexPath) as! CompanyCell
+        companyCell.delegate = self
         if let companyList =  viewModel.getDataSource() {
-            companyCell.setCompanyDetails(company: companyList[indexPath.row])
+            companyCell.setCompanyDetailsAt(index: indexPath.row, company: companyList[indexPath.row])
         }
         return companyCell
     }
@@ -88,5 +89,12 @@ extension CompaniesVC: CompaniesViewable {
         DispatchQueue.main.async {
            self.tableView.reloadData()
         }
+    }
+}
+
+extension CompaniesVC: CompanyCellEditable {
+   
+    func markFavouriteCompany(isFavourite: Bool, index: Int) {
+        viewModel.markCompanyFavouriteAt(index: index, isFavourite: isFavourite)
     }
 }

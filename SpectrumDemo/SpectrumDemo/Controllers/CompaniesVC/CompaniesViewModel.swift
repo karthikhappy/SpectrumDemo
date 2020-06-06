@@ -68,16 +68,18 @@ class CompaniesViewModel {
     ///   - index: dropdown selection index
     public func sortCompaniesWith(index: Int) {
         let dropDownOption = CompanyFilters.allCases[index]
+        var sortedCompaines: Array<Company>?
         switch dropDownOption {
         case .allCompanies:
-            self.updateCompaniesViewDataSource(allCompanies)
+            sortedCompaines = allCompanies
         case .name:
-            let sortedCompaines = sortCompainesWithName()
-            self.updateCompaniesViewDataSource(sortedCompaines)
-        default: break
+            sortedCompaines = sortCompainesWithName()
+        case .favorites:
+            sortedCompaines = filterFavouriteCompaines()
         }
+        self.updateCompaniesViewDataSource(sortedCompaines)
     }
-
+    
     /// Sort compaines  company Name
     private func sortCompainesWithName() -> Array<Company>? {
         guard let companylist = allCompanies else { return [] }
@@ -92,6 +94,20 @@ class CompaniesViewModel {
         return foundCompaines
     }
     
+    /// Filter Favourite Compaines
+    private func filterFavouriteCompaines() -> Array<Company>? {
+        guard let companylist = allCompanies else { return [] }
+        let favouriteCompaines = companylist.filter { ($0.isFavorite == true) }
+        return favouriteCompaines
+    }
+
+    /// Mark Company as favourite or unfavourite
+    public func markCompanyFavouriteAt(index: Int, isFavourite: Bool) {
+        guard let datasourceList = dataSource  else { return }
+        let currentCompany = datasourceList[index]
+        currentCompany.isFavorite = isFavourite
+    }
+
     /// Store and refresh the compaines list view with updated data source.
     ///
     /// - Parameters:

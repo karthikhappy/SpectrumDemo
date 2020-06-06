@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -64,12 +65,29 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jha-1k-egl">
                                                             <rect key="frame" x="110" y="0.0" width="304" height="103"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GYNKO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48d-ew-u8A">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Plf-DG-sdg">
                                                                     <rect key="frame" x="0.0" y="0.0" width="304" height="18"/>
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GYNKO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48d-ew-u8A">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="246" height="18"/>
+                                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYU-nY-vIh">
+                                                                            <rect key="frame" x="254" y="0.0" width="50" height="18"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="25" id="Sso-LQ-rlu"/>
+                                                                                <constraint firstAttribute="width" constant="50" id="n6m-Zh-rJt"/>
+                                                                            </constraints>
+                                                                            <state key="normal" image="unselect_favorite"/>
+                                                                            <state key="selected" image="select_favorite"/>
+                                                                            <connections>
+                                                                                <action selector="favouriteButtonAction:" destination="Bga-9i-99u" eventType="touchUpInside" id="kYW-Bc-gLi"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.gynko.co.uk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPz-yy-foU">
                                                                     <rect key="frame" x="0.0" y="18" width="304" height="20"/>
                                                                     <constraints>
@@ -103,6 +121,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="descriptionInfo" destination="CTP-10-y9X" id="djd-Ra-Qp9"/>
+                                            <outlet property="favouriteBtn" destination="eYU-nY-vIh" id="uqR-tI-S0j"/>
                                             <outlet property="logoImageView" destination="Drc-jj-TEN" id="vLo-Yo-vrM"/>
                                             <outlet property="name" destination="48d-ew-u8A" id="z5p-S7-KEg"/>
                                             <outlet property="website" destination="DPz-yy-foU" id="SHx-uW-llN"/>
@@ -196,12 +215,28 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miq-V9-ji9">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="77v-Kh-n1O">
                                                                     <rect key="frame" x="0.0" y="26" width="329" height="25.5"/>
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miq-V9-ji9">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="269" height="25.5"/>
+                                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ht1-Ok-Abx">
+                                                                            <rect key="frame" x="269" y="0.0" width="60" height="25.5"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="60" id="7X6-ET-LQS"/>
+                                                                            </constraints>
+                                                                            <state key="normal" image="unselect_favorite"/>
+                                                                            <state key="selected" image="select_favorite"/>
+                                                                            <connections>
+                                                                                <action selector="favouriteButtonAction:" destination="Jeg-xd-xbz" eventType="touchUpInside" id="BIz-eh-aHM"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="83576107" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72G-sz-cwM">
                                                                     <rect key="frame" x="0.0" y="51.5" width="329" height="26"/>
                                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
@@ -232,6 +267,7 @@
                                         <connections>
                                             <outlet property="age" destination="miq-V9-ji9" id="wws-8E-95s"/>
                                             <outlet property="email" destination="5IM-kx-g71" id="7FA-fM-w0R"/>
+                                            <outlet property="favouriteBtn" destination="Ht1-Ok-Abx" id="zil-Mk-4Zk"/>
                                             <outlet property="name" destination="e6A-mT-Hr9" id="ByR-wW-ltj"/>
                                             <outlet property="phone" destination="72G-sz-cwM" id="hDK-93-VUK"/>
                                         </connections>
@@ -263,5 +299,7 @@
     </scenes>
     <resources>
         <image name="logo-navbar" width="150" height="25"/>
+        <image name="select_favorite" width="20" height="20"/>
+        <image name="unselect_favorite" width="20" height="20"/>
     </resources>
 </document>

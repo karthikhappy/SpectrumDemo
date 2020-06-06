@@ -70,7 +70,8 @@ class MembersViewModel {
              sortedMembers = sortMembersWithName()
         case .age:
              sortedMembers = sortMembersWithAge()
-        default: break
+        case .favorites:
+            sortedMembers = filterFavouriteMembers()
         }
          
         self.updateMembersViewDataSource(sortedMembers)
@@ -102,6 +103,20 @@ class MembersViewModel {
             return isSorted
         }
         return foundCompaines
+    }
+
+    /// Filter Favourite Members
+    private func filterFavouriteMembers() -> Array<Member>? {
+        guard let members = dataSource else { return [] }
+        let favouriteMembers = members.filter { ($0.isFavorite == true) }
+        return favouriteMembers
+    }
+
+    /// Mark Member as favourite or unfavourite
+    public func markMemberFavouriteAt(index: Int, isFavourite: Bool) {
+        guard let datasourceList = dataSource  else { return }
+        let currentMember = datasourceList[index]
+        currentMember.isFavorite = isFavourite
     }
 
     /// Store and refresh the members list view with updated data source.

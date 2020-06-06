@@ -8,17 +8,24 @@
 
 import UIKit
 
+protocol CompanyCellEditable: class {
+    func markFavouriteCompany(isFavourite: Bool, index: Int)
+}
+
 class CompanyCell: UITableViewCell {
 
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var website: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var descriptionInfo: UILabel!
-    
+    @IBOutlet weak var favouriteBtn: UIButton!
+    weak public var delegate: CompanyCellEditable?
+   
+    private var cellIndex: Int!
     lazy var serviceManger: ServiceManager = {
         return ServiceManager()
     }()
-
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         logoImageView.image = nil
@@ -37,10 +44,14 @@ class CompanyCell: UITableViewCell {
     /// displaying comany name, logo, website and company description details
     /// Parameters:
     /// company - object which conatins name, logo, website and company description details
-    func setCompanyDetails(company: Company) {
+    func setCompanyDetailsAt(index:Int, company: Company) {
+        cellIndex = index
         name.text = company.company ?? ""
         descriptionInfo.text = company.about ?? ""
         website.text = company.website ?? ""
+                
+        favouriteBtn.isSelected = company.isFavorite ?? false
+        
         guard let logoUrl = company.logo  else { return }
         serviceManger.downloadImage(logoUrl) { [weak self] (data, error) in
             if let imageData = data {
@@ -50,4 +61,10 @@ class CompanyCell: UITableViewCell {
             }
         }
     }
+    
+    @IBAction func favouriteButtonAction(_ sender: Any) {
+        favouriteBtn.isSelected = !favouriteBtn.isSelected
+        delegate?.markFavouriteCompany(isFavourite: favouriteBtn.isSelected, index: cellIndex)
+    }
+
 }

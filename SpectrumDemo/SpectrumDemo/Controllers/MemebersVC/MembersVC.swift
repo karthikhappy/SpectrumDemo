@@ -58,8 +58,9 @@ extension MembersVC: UITableViewDataSource, UITableViewDelegate  {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let memberCell: MemberCell = tableView.dequeueReusableCell(withIdentifier: memberCellIdentifier, for: indexPath) as! MemberCell
+        memberCell.delegate = self
         if let members = viewModel.getDataSource() {
-            memberCell.setMemberDetails(member: members[indexPath.row])
+            memberCell.setMemberDetailsAt(index: indexPath.row, member: members[indexPath.row])
         }
         return memberCell
     }
@@ -71,5 +72,12 @@ extension MembersVC : MembersViewable {
         DispatchQueue.main.async {
           self.tableView.reloadData()
         }
+    }
+}
+
+extension MembersVC: MemberCellEditable {
+   
+    func markFavouriteMember(isFavourite: Bool, index: Int) {
+        viewModel.markMemberFavouriteAt(index: index, isFavourite: isFavourite)
     }
 }

@@ -15,7 +15,16 @@
 		115FEF0E248B2F510037D805 /* CompaniesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FEF0D248B2F510037D805 /* CompaniesVC.swift */; };
 		115FEF0F248B2F510037D805 /* CompaniesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FEF0D248B2F510037D805 /* CompaniesVC.swift */; };
 		115FEF10248B2F510037D805 /* CompaniesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FEF0D248B2F510037D805 /* CompaniesVC.swift */; };
-		119B5CFB248B30DF004EF952 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 119B5CF9248B30DF004EF952 /* Info.plist */; };
+		117861B7248B38B8006AA22E /* ServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117861B6248B38B8006AA22E /* ServiceConstants.swift */; };
+		117861B8248B38B8006AA22E /* ServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117861B6248B38B8006AA22E /* ServiceConstants.swift */; };
+		117861BA248B38DC006AA22E /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117861B9248B38DC006AA22E /* ServiceManager.swift */; };
+		117861BB248B38DC006AA22E /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117861B9248B38DC006AA22E /* ServiceManager.swift */; };
+		117861BD248B38FD006AA22E /* NetWorkProvdier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117861BC248B38FD006AA22E /* NetWorkProvdier.swift */; };
+		117861BE248B38FD006AA22E /* NetWorkProvdier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117861BC248B38FD006AA22E /* NetWorkProvdier.swift */; };
+		117861C0248B3927006AA22E /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117861BF248B3927006AA22E /* Company.swift */; };
+		117861C1248B3927006AA22E /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117861BF248B3927006AA22E /* Company.swift */; };
+		117861C3248B3954006AA22E /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117861C2248B3954006AA22E /* Member.swift */; };
+		117861C4248B3954006AA22E /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117861C2248B3954006AA22E /* Member.swift */; };
 		119B5CFC248B30DF004EF952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119B5CFA248B30DF004EF952 /* Assets.xcassets */; };
 		119B5D08248B3114004EF952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119B5D04248B3114004EF952 /* LaunchScreen.storyboard */; };
 		119B5D09248B3114004EF952 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119B5D06248B3114004EF952 /* Main.storyboard */; };
@@ -50,6 +59,11 @@
 		115FEF06248B2E8D0037D805 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		115FEF07248B2E8D0037D805 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		115FEF0D248B2F510037D805 /* CompaniesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompaniesVC.swift; sourceTree = "<group>"; };
+		117861B6248B38B8006AA22E /* ServiceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConstants.swift; sourceTree = "<group>"; };
+		117861B9248B38DC006AA22E /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		117861BC248B38FD006AA22E /* NetWorkProvdier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkProvdier.swift; sourceTree = "<group>"; };
+		117861BF248B3927006AA22E /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		117861C2248B3954006AA22E /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		119B5CF9248B30DF004EF952 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		119B5CFA248B30DF004EF952 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		119B5D05248B3114004EF952 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -146,6 +160,8 @@
 		115FEF01248B2D7A0037D805 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				117861BF248B3927006AA22E /* Company.swift */,
+				117861C2248B3954006AA22E /* Member.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,6 +169,9 @@
 		115FEF02248B2D830037D805 /* Serivices */ = {
 			isa = PBXGroup;
 			children = (
+				117861B6248B38B8006AA22E /* ServiceConstants.swift */,
+				117861B9248B38DC006AA22E /* ServiceManager.swift */,
+				117861BC248B38FD006AA22E /* NetWorkProvdier.swift */,
 			);
 			path = Serivices;
 			sourceTree = "<group>";
@@ -310,7 +329,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119B5CFB248B30DF004EF952 /* Info.plist in Resources */,
 				119B5D09248B3114004EF952 /* Main.storyboard in Resources */,
 				119B5D08248B3114004EF952 /* LaunchScreen.storyboard in Resources */,
 				115FEEFF248B291E0037D805 /* README.md in Resources */,
@@ -342,6 +360,11 @@
 				115FEF08248B2E8D0037D805 /* AppDelegate.swift in Sources */,
 				115FEF09248B2E8D0037D805 /* SceneDelegate.swift in Sources */,
 				115FEF0E248B2F510037D805 /* CompaniesVC.swift in Sources */,
+				117861BD248B38FD006AA22E /* NetWorkProvdier.swift in Sources */,
+				117861C0248B3927006AA22E /* Company.swift in Sources */,
+				117861B7248B38B8006AA22E /* ServiceConstants.swift in Sources */,
+				117861BA248B38DC006AA22E /* ServiceManager.swift in Sources */,
+				117861C3248B3954006AA22E /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,8 +372,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117861B8248B38B8006AA22E /* ServiceConstants.swift in Sources */,
 				115FEF0F248B2F510037D805 /* CompaniesVC.swift in Sources */,
+				117861BE248B38FD006AA22E /* NetWorkProvdier.swift in Sources */,
 				115FEEE6248B27C80037D805 /* SpectrumDemoTests.swift in Sources */,
+				117861BB248B38DC006AA22E /* ServiceManager.swift in Sources */,
+				117861C4248B3954006AA22E /* Member.swift in Sources */,
+				117861C1248B3927006AA22E /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +545,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SpectrumDemo/Info.plist;
+				INFOPLIST_FILE = SpectrumDemo/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -534,7 +562,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SpectrumDemo/Info.plist;
+				INFOPLIST_FILE = SpectrumDemo/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -53,12 +53,14 @@ class CompanyCell: UITableViewCell {
         favouriteBtn.isSelected = company.isFavorite ?? false
         
         guard let logoUrl = company.logo  else { return }
-        serviceManger.downloadImage(logoUrl) { [weak self] (data, error) in
-            if let imageData = data {
-                DispatchQueue.main.async {
-                    self?.logoImageView.image = UIImage(data: imageData)
-                }
-            }
+        guard let imagePath = company._id  else { return }
+
+        ImageDownloader.downloadImage(logoUrl, imagePath: imagePath) {[weak self] (image, error) in
+           if let logo = image {
+               DispatchQueue.main.async {
+                   self?.logoImageView.image = logo
+               }
+           }
         }
     }
     

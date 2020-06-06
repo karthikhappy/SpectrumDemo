@@ -33,7 +33,7 @@ class ServiceManager {
     /// - Parameters:
     ///  - imageUrl: url path for image
     ///  - completion: retruns 'companies' - Image data and error infos.
-    func downloadImage(_ imageUrl: String, completion: @escaping (_ imageData: Data?, _ error: Error?) -> Void) {
+    func fetchImage(_ imageUrl: String, completion: @escaping (_ imageData: Data?, _ error: Error?) -> Void) {
        
        NetWorkProvdier.requestWithURL(url: imageUrl, methodType: ServiceType.GET.rawValue, data: nil) { (response, error) in
          guard let imageData = response, error == nil else {

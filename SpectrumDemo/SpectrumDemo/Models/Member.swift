@@ -14,6 +14,7 @@ struct Member: Codable {
     var name: Name?
     var email: String?
     var age: Int?
+    var isFavorite: Bool?
 }
 
 struct Name: Codable {

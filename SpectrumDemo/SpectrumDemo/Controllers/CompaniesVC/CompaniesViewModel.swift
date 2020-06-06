@@ -45,7 +45,7 @@ class CompaniesViewModel {
         }
     }
 
-    /// Filtering the compamnies based on the user search input. The filiter performed basded on Company Name.
+    /// Filter compaines by ompany Name.
     ///
     /// - Parameters:
     ///   - searchText: text to filter companies with company name
@@ -62,6 +62,36 @@ class CompaniesViewModel {
         self.updateCompaniesViewDataSource(foundCompaines)
     }
 
+    /// Sort compaines  company Name and favourite.
+    ///
+    /// - Parameters:
+    ///   - index: dropdown selection index
+    public func sortCompaniesWith(index: Int) {
+        let dropDownOption = CompanyFilters.allCases[index]
+        switch dropDownOption {
+        case .allCompanies:
+            self.updateCompaniesViewDataSource(allCompanies)
+        case .name:
+            let sortedCompaines = sortCompainesWithName()
+            self.updateCompaniesViewDataSource(sortedCompaines)
+        default: break
+        }
+    }
+
+    /// Sort compaines  company Name
+    private func sortCompainesWithName() -> Array<Company>? {
+        guard let companylist = allCompanies else { return [] }
+        
+        let foundCompaines = companylist.sorted {
+            var isSorted = false
+            if let first = $0.company, let second = $1.company {
+                isSorted = first < second
+            }
+            return isSorted
+        }
+        return foundCompaines
+    }
+    
     /// Store and refresh the compaines list view with updated data source.
     ///
     /// - Parameters:

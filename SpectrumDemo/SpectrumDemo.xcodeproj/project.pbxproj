@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,8 +33,12 @@
 		117861D3248B4842006AA22E /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117861D2248B4842006AA22E /* MemberCell.swift */; };
 		117861D5248B4990006AA22E /* CompaniesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117861D4248B4990006AA22E /* CompaniesViewModel.swift */; };
 		117861D7248B59D5006AA22E /* MembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117861D6248B59D5006AA22E /* MembersViewModel.swift */; };
+		117861D9248B8119006AA22E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117861D8248B8119006AA22E /* Constants.swift */; };
 		119B5CFC248B30DF004EF952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119B5CFA248B30DF004EF952 /* Assets.xcassets */; };
 		119B5D08248B3114004EF952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119B5D04248B3114004EF952 /* LaunchScreen.storyboard */; };
+		524F6CD3AF9FCF486EFB92F5 /* Pods_SpectrumDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5C64CEE8DAC30650C8BACE /* Pods_SpectrumDemo.framework */; };
+		6AB630A8CA338A7BE2179FB8 /* Pods_SpectrumDemo_SpectrumDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C04FCF7BAE40434E3459DD8 /* Pods_SpectrumDemo_SpectrumDemoUITests.framework */; };
+		766FA58128DD9608550BCC1B /* Pods_SpectrumDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F4D7F82CA6CA18CDE35CFD /* Pods_SpectrumDemoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,9 +83,19 @@
 		117861D2248B4842006AA22E /* MemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
 		117861D4248B4990006AA22E /* CompaniesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesViewModel.swift; sourceTree = "<group>"; };
 		117861D6248B59D5006AA22E /* MembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersViewModel.swift; sourceTree = "<group>"; };
+		117861D8248B8119006AA22E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		119B5CF9248B30DF004EF952 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		119B5CFA248B30DF004EF952 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		119B5D05248B3114004EF952 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		132E98CFFD283794A945DA82 /* Pods-SpectrumDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpectrumDemo.debug.xcconfig"; path = "Target Support Files/Pods-SpectrumDemo/Pods-SpectrumDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		1E5C64CEE8DAC30650C8BACE /* Pods_SpectrumDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpectrumDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C04FCF7BAE40434E3459DD8 /* Pods_SpectrumDemo_SpectrumDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpectrumDemo_SpectrumDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37FFB2B5EB58AA1AB7ED802A /* Pods-SpectrumDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpectrumDemoTests.release.xcconfig"; path = "Target Support Files/Pods-SpectrumDemoTests/Pods-SpectrumDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		72F67727F8D5B86430963E48 /* Pods-SpectrumDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpectrumDemo.release.xcconfig"; path = "Target Support Files/Pods-SpectrumDemo/Pods-SpectrumDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8110C8DB491DA9C8B54EE6CE /* Pods-SpectrumDemo-SpectrumDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpectrumDemo-SpectrumDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-SpectrumDemo-SpectrumDemoUITests/Pods-SpectrumDemo-SpectrumDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		83F4D7F82CA6CA18CDE35CFD /* Pods_SpectrumDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpectrumDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB1AA845F9D11A06782F125D /* Pods-SpectrumDemo-SpectrumDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpectrumDemo-SpectrumDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-SpectrumDemo-SpectrumDemoUITests/Pods-SpectrumDemo-SpectrumDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CDBA0198DB9B67B42FD015A6 /* Pods-SpectrumDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpectrumDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-SpectrumDemoTests/Pods-SpectrumDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				524F6CD3AF9FCF486EFB92F5 /* Pods_SpectrumDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				766FA58128DD9608550BCC1B /* Pods_SpectrumDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,12 +119,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AB630A8CA338A7BE2179FB8 /* Pods_SpectrumDemo_SpectrumDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02EE8933590D7C5F49247AF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				132E98CFFD283794A945DA82 /* Pods-SpectrumDemo.debug.xcconfig */,
+				72F67727F8D5B86430963E48 /* Pods-SpectrumDemo.release.xcconfig */,
+				8110C8DB491DA9C8B54EE6CE /* Pods-SpectrumDemo-SpectrumDemoUITests.debug.xcconfig */,
+				BB1AA845F9D11A06782F125D /* Pods-SpectrumDemo-SpectrumDemoUITests.release.xcconfig */,
+				CDBA0198DB9B67B42FD015A6 /* Pods-SpectrumDemoTests.debug.xcconfig */,
+				37FFB2B5EB58AA1AB7ED802A /* Pods-SpectrumDemoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		115FEEC2248B27C70037D805 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +146,8 @@
 				115FEEE4248B27C80037D805 /* SpectrumDemoTests */,
 				115FEEEF248B27C80037D805 /* SpectrumDemoUITests */,
 				115FEECC248B27C70037D805 /* Products */,
+				02EE8933590D7C5F49247AF2 /* Pods */,
+				F6719E8D019BA04562BAC3A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,6 +236,7 @@
 		115FEF0A248B2EC50037D805 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				117861D8248B8119006AA22E /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -262,6 +295,16 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		F6719E8D019BA04562BAC3A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E5C64CEE8DAC30650C8BACE /* Pods_SpectrumDemo.framework */,
+				2C04FCF7BAE40434E3459DD8 /* Pods_SpectrumDemo_SpectrumDemoUITests.framework */,
+				83F4D7F82CA6CA18CDE35CFD /* Pods_SpectrumDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -269,9 +312,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 115FEEF5248B27C80037D805 /* Build configuration list for PBXNativeTarget "SpectrumDemo" */;
 			buildPhases = (
+				9E26219629408CA37861D6A9 /* [CP] Check Pods Manifest.lock */,
 				115FEEC7248B27C70037D805 /* Sources */,
 				115FEEC8248B27C70037D805 /* Frameworks */,
 				115FEEC9248B27C70037D805 /* Resources */,
+				13917978A0F8E582F6463836 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,6 +331,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 115FEEF8248B27C80037D805 /* Build configuration list for PBXNativeTarget "SpectrumDemoTests" */;
 			buildPhases = (
+				5CEB3352150E265921037897 /* [CP] Check Pods Manifest.lock */,
 				115FEEDD248B27C80037D805 /* Sources */,
 				115FEEDE248B27C80037D805 /* Frameworks */,
 				115FEEDF248B27C80037D805 /* Resources */,
@@ -304,9 +350,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 115FEEFB248B27C80037D805 /* Build configuration list for PBXNativeTarget "SpectrumDemoUITests" */;
 			buildPhases = (
+				46B6115BE86F17AC0811A2E0 /* [CP] Check Pods Manifest.lock */,
 				115FEEE8248B27C80037D805 /* Sources */,
 				115FEEE9248B27C80037D805 /* Frameworks */,
 				115FEEEA248B27C80037D805 /* Resources */,
+				A4E2F68F6DFECD1AEEDDC127 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -389,6 +437,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13917978A0F8E582F6463836 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpectrumDemo/Pods-SpectrumDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpectrumDemo/Pods-SpectrumDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpectrumDemo/Pods-SpectrumDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46B6115BE86F17AC0811A2E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpectrumDemo-SpectrumDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CEB3352150E265921037897 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpectrumDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E26219629408CA37861D6A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpectrumDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4E2F68F6DFECD1AEEDDC127 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpectrumDemo-SpectrumDemoUITests/Pods-SpectrumDemo-SpectrumDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpectrumDemo-SpectrumDemoUITests/Pods-SpectrumDemo-SpectrumDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpectrumDemo-SpectrumDemoUITests/Pods-SpectrumDemo-SpectrumDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		115FEEC7248B27C70037D805 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -401,6 +552,7 @@
 				115FEF09248B2E8D0037D805 /* SceneDelegate.swift in Sources */,
 				115FEF0E248B2F510037D805 /* CompaniesVC.swift in Sources */,
 				117861BD248B38FD006AA22E /* NetWorkProvdier.swift in Sources */,
+				117861D9248B8119006AA22E /* Constants.swift in Sources */,
 				117861C0248B3927006AA22E /* Company.swift in Sources */,
 				117861C7248B44DC006AA22E /* BaseViewController.swift in Sources */,
 				117861D5248B4990006AA22E /* CompaniesViewModel.swift in Sources */,
@@ -586,6 +738,7 @@
 		};
 		115FEEF6248B27C80037D805 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 132E98CFFD283794A945DA82 /* Pods-SpectrumDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -603,6 +756,7 @@
 		};
 		115FEEF7248B27C80037D805 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72F67727F8D5B86430963E48 /* Pods-SpectrumDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -620,6 +774,7 @@
 		};
 		115FEEF9248B27C80037D805 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDBA0198DB9B67B42FD015A6 /* Pods-SpectrumDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -641,6 +796,7 @@
 		};
 		115FEEFA248B27C80037D805 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37FFB2B5EB58AA1AB7ED802A /* Pods-SpectrumDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -662,6 +818,7 @@
 		};
 		115FEEFC248B27C80037D805 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8110C8DB491DA9C8B54EE6CE /* Pods-SpectrumDemo-SpectrumDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -681,6 +838,7 @@
 		};
 		115FEEFD248B27C80037D805 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB1AA845F9D11A06782F125D /* Pods-SpectrumDemo-SpectrumDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

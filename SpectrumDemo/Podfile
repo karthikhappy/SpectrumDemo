@@ -1,0 +1,17 @@
+target 'SpectrumDemo' do
+  use_frameworks!
+
+  pod 'DropDown'
+
+  # Pods for SpectrumDemo
+
+  target 'SpectrumDemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SpectrumDemoUITests' do
+    # Pods for testing
+  end
+
+end

@@ -39,7 +39,7 @@ class MembersViewModel {
         return dataSource
     }
 
-    /// Filtering the Members based on the user search input. The filiter performed basded on Member Name.
+    /// Filtering members with Name.
     ///
     /// - Parameters:
     ///   - searchText: text to filter members with member name
@@ -54,6 +54,54 @@ class MembersViewModel {
         guard let memberlist = self.company?.members else { return }
         let foundMembers = memberlist.filter { ($0.name?.first?.contains(searchText) ?? false) }
         self.updateMembersViewDataSource(foundMembers)
+    }
+
+    /// Sort members based on drop down selection. It has options - All, sort by name,  sort by Age and favourite
+    ///
+    /// - Parameters:
+    ///   - index: dropdown selection option
+    public func sortMembersWith(index: Int) {
+        let dropDownOption = MemberFilters.allCases[index]
+        var sortedMembers: Array<Member>?
+        switch dropDownOption {
+        case .allmembers:
+            sortedMembers = company?.members
+        case .name:
+             sortedMembers = sortMembersWithName()
+        case .age:
+             sortedMembers = sortMembersWithAge()
+        default: break
+        }
+         
+        self.updateMembersViewDataSource(sortedMembers)
+    }
+
+    /// Sort members by name. This is performed based on first name.
+    private func sortMembersWithName() -> Array<Member>? {
+        guard let members = company?.members else { return [] }
+        
+        let foundCompaines = members.sorted {
+            var isSorted = false
+            if let first = $0.name?.first, let second = $1.name?.first {
+                isSorted = first < second
+            }
+            return isSorted
+        }
+        return foundCompaines
+    }
+    
+    /// Sort members by Age.
+    private func sortMembersWithAge() -> Array<Member>? {
+        guard let members = company?.members else { return [] }
+        
+        let foundCompaines = members.sorted {
+            var isSorted = false
+            if let first = $0.age, let second = $1.age {
+                isSorted = first < second
+            }
+            return isSorted
+        }
+        return foundCompaines
     }
 
     /// Store and refresh the members list view with updated data source.

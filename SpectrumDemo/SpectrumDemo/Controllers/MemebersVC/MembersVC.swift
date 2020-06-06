@@ -38,6 +38,16 @@ class MembersVC: BaseViewController {
         viewModel.filiterMembers("")
     }
 
+    //MARK: Sorting DropDown
+    override public func dropDowndidSelectAtIndex(index: Int, item: String)  {
+        // Sort Members based on drop dow selection
+        viewModel.sortMembersWith(index: index)
+    }
+
+    override public func dropDownDataSource() -> Array<String>? {
+        return MemberFilters.allCases.map { $0.rawValue }
+    }
+
 }
 
 extension MembersVC: UITableViewDataSource, UITableViewDelegate  {

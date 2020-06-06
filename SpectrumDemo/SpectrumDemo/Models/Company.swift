@@ -15,4 +15,5 @@ struct Company: Codable {
     var members: Array<Member>?
     var about: String?
     var logo: String?
+    var isFavorite: Bool?
 }

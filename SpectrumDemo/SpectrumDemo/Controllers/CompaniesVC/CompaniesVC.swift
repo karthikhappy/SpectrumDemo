@@ -39,6 +39,16 @@ class CompaniesVC: BaseViewController {
          // Make search text empty then the view model will fresh table view with all companies.
         viewModel.filiterCompanies("")
     }
+   
+    //MARK: Sorting DropDown
+    override public func dropDowndidSelectAtIndex(index: Int, item: String)  {
+        // Sort companies based on drop down selection.
+        viewModel.sortCompaniesWith(index: index)
+    }
+
+    override public func dropDownDataSource() -> Array<String>? {
+        return CompanyFilters.allCases.map { $0.rawValue }
+    }
 }
 
 extension CompaniesVC: UITableViewDataSource {

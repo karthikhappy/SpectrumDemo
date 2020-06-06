@@ -11,6 +11,7 @@ import Foundation
 /// CompaniesViewable helps to refresh the list view in CompaniesVC with updated data source.
 protocol CompaniesViewable: class {
     func refreshCompaniesView()
+    func hideActivityView()
 }
 
 class CompaniesViewModel {
@@ -42,6 +43,7 @@ class CompaniesViewModel {
         serviceManger.fetchClubDetails {[weak self] (companies, error) in
             self?.allCompanies = companies
             self?.updateCompaniesViewDataSource(companies)
+            self?.delegate?.hideActivityView()
         }
     }
 

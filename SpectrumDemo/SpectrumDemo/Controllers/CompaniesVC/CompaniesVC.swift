@@ -15,8 +15,13 @@ let memberVCIndentifier = "MembersVC"
 class CompaniesVC: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
     private lazy var viewModel: CompaniesViewModel = {
         return CompaniesViewModel()
+    }()
+
+    private lazy var activityView: ActivityView? = {
+        return ActivityView()
     }()
 
     override func viewDidLoad() {
@@ -24,6 +29,8 @@ class CompaniesVC: BaseViewController {
         viewModel.delegate = self as CompaniesViewable
 
         addleftBarButtonItem()
+        
+        activityView?.showIndicator()
         
         // Fetch Company list from sever.
         viewModel.fetchCompanies()
@@ -86,9 +93,16 @@ extension CompaniesVC: UITableViewDelegate {
 extension CompaniesVC: CompaniesViewable {
     
     func refreshCompaniesView() {
-        DispatchQueue.main.async {
-           self.tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+           self?.tableView.reloadData()
         }
+    }
+    
+    func hideActivityView()  {
+       DispatchQueue.main.async { [weak self] in
+          self?.activityView?.hideIndicator()
+          self?.activityView = nil
+       }
     }
 }
 

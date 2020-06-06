@@ -12,63 +12,68 @@ let companyCellIdentifier = "CompanyCell"
 let storyBoardName = "Main"
 let memberVCIndentifier = "MembersVC"
 
-class CompaniesVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, CompaniesViewable {
+class CompaniesVC: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    private var viewModel: CompaniesViewModel?
-    
+    private lazy var viewModel: CompaniesViewModel = {
+        return CompaniesViewModel()
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = CompaniesViewModel()
-        viewModel?.delegate = self as CompaniesViewable
+        viewModel.delegate = self as CompaniesViewable
 
         addleftBarButtonItem()
         
         // Fetch Company list from sever.
-        viewModel?.fetchCompanies()
+        viewModel.fetchCompanies()
     }
 
     override func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // Filter companies with search text
-        viewModel?.filiterCompanies(searchText)
+        viewModel.filiterCompanies(searchText)
     }
     
     override func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         super.searchBarTextDidEndEditing(searchBar)
          // Make search text empty then the view model will fresh table view with all companies.
-        viewModel?.filiterCompanies("")
+        viewModel.filiterCompanies("")
     }
 }
 
-extension CompaniesVC {
+extension CompaniesVC: UITableViewDataSource {
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return  viewModel?.getDataSource()?.count ?? 0
+        return  viewModel.getDataSource()?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let companyCell: CompanyCell = tableView.dequeueReusableCell(withIdentifier: companyCellIdentifier, for: indexPath) as! CompanyCell
-        if let companyList =  viewModel?.getDataSource() {
+        if let companyList =  viewModel.getDataSource() {
             companyCell.setCompanyDetails(company: companyList[indexPath.row])
         }
         return companyCell
     }
 }
 
-extension CompaniesVC {
+extension CompaniesVC: UITableViewDelegate {
    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let companyList = viewModel?.getDataSource() {
+        if let companyList = viewModel.getDataSource() {
             navigateToMemberVC(company: companyList[indexPath.row])
         }
     }
     
     func navigateToMemberVC(company: Company) {
+        let storyBoard = UIStoryboard(name: storyBoardName, bundle: Bundle.main)
+        let membersVC: MembersVC = storyBoard.instantiateViewController(identifier: memberVCIndentifier)
+        membersVC.setComany(company)
+        navigationController?.pushViewController(membersVC, animated: true)
     }
 }
 
-extension CompaniesVC {
+extension CompaniesVC: CompaniesViewable {
+    
     func refreshCompaniesView() {
         DispatchQueue.main.async {
            self.tableView.reloadData()

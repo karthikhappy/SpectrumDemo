@@ -38,7 +38,6 @@ class CompanyCell: UITableViewCell {
     /// Parameters:
     /// company - object which conatins name, logo, website and company description details
     func setCompanyDetails(company: Company) {
-      
         name.text = company.company ?? ""
         descriptionInfo.text = company.about ?? ""
         website.text = company.website ?? ""

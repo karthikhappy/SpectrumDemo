@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// CompaniesViewable helps to refresh the list view
+/// CompaniesViewable helps to refresh the list view in CompaniesVC with updated data source.
 protocol CompaniesViewable: class {
     func refreshCompaniesView()
 }
@@ -29,7 +29,6 @@ class CompaniesViewModel {
         return ServiceManager()
     }()
 
-    
     /// It always retruns updated data source based on user actions filter or sorting.
     ///
     /// - Return:

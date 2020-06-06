@@ -252,6 +252,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gB8-TH-RdE"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Rgu-BY-rww" id="NNG-Lx-WIa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3os-Ty-1ek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -259,6 +262,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo-navbar" width="227" height="222"/>
+        <image name="logo-navbar" width="150" height="25"/>
     </resources>
 </document>
